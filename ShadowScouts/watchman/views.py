@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
+from .models import Contact
 
 # Create your views here.
 def home(request):
@@ -9,6 +10,9 @@ def contact(request):
         name = request.POST['name']
         email = request.POST['email']
         msg = request.POST['message']
+        new_contact = Contact(name = name , email = email , message = msg)
+        new_contact.save()
+        return render(request,"homepage.html")
     return render(request,"contactUs.html")
 
 def about(request):
