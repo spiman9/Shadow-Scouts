@@ -1,6 +1,20 @@
 {% extends 'homepage.html' %}
+{% load static %}
+
 
 {% block content %}
-    {% comment %} <h1>This is about page</h1> {% endcomment %}
-    <h1>About</h1>
+<link rel="stylesheet" href="{% static '/css/about.css' %}">
+<div class="about">
+    <img src="{% static 'img/panda.jfif' %} ">
+
+</div>
+<div class="about2">
+    <img src="{% static 'img/panda.jfif' %}">
+</div>
+<div class="about">
+    <img src="{% static 'img/panda.jfif' %}">
+</div>
+<div class="about2">
+    <img src="{% static 'img/panda.jfif' %}" style="place-items:left;">
+</div>
 {% endblock content %}
