@@ -5,6 +5,10 @@ def home(request):
     return render(request,"homepage.html")
 
 def contact(request):
+    if(request.method == "POST"):
+        name = request.POST['name']
+        email = request.POST['email']
+        msg = request.POST['message']
     return render(request,"contactUs.html")
 
 def about(request):
