@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     "watchman.apps.WatchmanConfig",
     "django.contrib.admin",
