@@ -1,174 +1,83 @@
-{% extends 'homepage.html' %}
-{% load static %}
-
-{% block content %}
-<style>
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
-body {
-   background: url({% static 'img/leave.jpeg' %}) no-repeat center center fixed;
-    /* http://andstud.io/wp-content/uploads/2014/03/blurrrr2.jpg */
-  	-webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-    padding-top: 0px;
-}
-
-h1 {
-   color: rgb(67, 163, 67); 
-   text-shadow: 1px 1px 0 rgba(203, 32, 32, 0.4);
-   padding-top: 30px;
-   font-size: 100px; 
-   font-weight: 700;
-   text-align: center;
-   font-family: 'Source Sans Pro', sans-serif;
-   margin: 0px;
-}
-
-form {
-    margin-left:auto;
-    margin-right:auto;
-    width: 965px;
-    height: 450px;
-    padding:30px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box; 
-    overflow: hidden; 
-}
-
-/* textarea{
-	  background: rgba(0, 0, 0, 0.4); 
-    width: 894px;
-    height: 110px;
-    border: none;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box; 
-    display: block;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-    color: #fff;
-    padding-left: 45px;
-    padding-right: 20px;
-    padding-top: 12px;
-    margin-bottom: 20px;
-    overflow: hidden;
-} */
-
-
-
-.nameinput, .emailinput {
-    width: 894px;
-    height: 48px;
-    border: none;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box; 
-    display: block;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-    color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-}
-
-/* input[type=submit] {
-    cursor: pointer;
-} */
-
-input.nameinput {
-	  background: rgba(0, 0, 0, 0.4); 
-	  padding-left: 45px;
-}
-
-input.emailinput {
-	  background: rgba(0, 0, 0, 0.4);
-	  padding-left: 45px;
-}
-
-/* input.message {
-	  background: rgba(0, 0, 0, 0.4);
-	  padding-left: 45px;
-} */
-
-/* select.indent {
-	  padding-left: 45px;
-    cursor: pointer;
-} */
-
-::-webkit-input-placeholder {
-	  color: #fff;
-}
-
-:-moz-placeholder{ 
-    color: #fff; 
-}
-
-::-moz-placeholder {
-    color: #fff;
-}
-
-:-ms-input-placeholder {  
-	  color: #fff; 
-}
-
-
-input[type=submit] {
-        background-color: rgb(160, 11, 14);
-        color: white;
-        border-radius: 18px;
-        margin: 10px;
-        box-shadow: 4px rgb(240, 130, 130);
-        width: 90px;;
-}
-
-
-
-</style>
-<body>
-<h1>leave submission Form</h1>
-<div class="wpcf7" id="wpcf7-f156-p143-o1 formwrap">
+{% extends 'homepage.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/leave.css' %}" />
+<div class="body-style">
+  <h1>leave submission Form</h1>
+  <div class="wpcf7" id="wpcf7-f156-p143-o1 formwrap">
     <form action="/" method="post" class="wpcf7-form" novalidate="novalidate">
-      {% csrf_token %} 
-        <div style="display: none;">
-            <input type="hidden" name="_wpcf7" value="156">
-            <input type="hidden" name="_wpcf7_version" value="3.7.2">
-            <input type="hidden" name="_wpcf7_locale" value="en_US">
-            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f156-p143-o1">
-            <input type="hidden" name="_wpnonce" value="d1da331d93">
-        </div>
-        <p>
-           <span class="wpcf7-form-control-wrap Name">
-             <input type="text" name="name" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name">
-          </span>
-          <span class="wpcf7-form-control-wrap Name">
-            <input type="text" name="address" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Address">
-         </span>
-         <span class="wpcf7-form-control-wrap Email">
-          <input type="date" name="date"  size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Date">
+      {% csrf_token %}
+      <div style="display: none">
+        <input type="hidden" name="_wpcf7" value="156" />
+        <input type="hidden" name="_wpcf7_version" value="3.7.2" />
+        <input type="hidden" name="_wpcf7_locale" value="en_US" />
+        <input
+          type="hidden"
+          name="_wpcf7_unit_tag"
+          value="wpcf7-f156-p143-o1"
+        />
+        <input type="hidden" name="_wpnonce" value="d1da331d93" />
+      </div>
+      <p>
+        <span class="wpcf7-form-control-wrap Name">
+          <input
+            type="text"
+            name="name"
+            value=""
+            size="40"
+            class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+            aria-required="true"
+            aria-invalid="false"
+            placeholder="Name"
+          />
         </span>
-          <span class="wpcf7-form-control-wrap Email">
-            <input type="email" name="email"  size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email">
-          </span>
-          <span class="wpcf7-form-control-wrap Email">
-            <input type="text" name="reason"  size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Reason">
-          </span>
-          
-         <center><input type="submit" value="SAVE "></center> 
-        </p>
-      
-  </form>
+        <span class="wpcf7-form-control-wrap Name">
+          <input
+            type="text"
+            name="address"
+            value=""
+            size="40"
+            class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+            aria-required="true"
+            aria-invalid="false"
+            placeholder="Address"
+          />
+        </span>
+        <span class="wpcf7-form-control-wrap Email">
+          <input
+            type="date"
+            name="date"
+            size="40"
+            class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+            aria-required="true"
+            aria-invalid="false"
+            placeholder="Date"
+          />
+        </span>
+        <span class="wpcf7-form-control-wrap Email">
+          <input
+            type="email"
+            name="email"
+            size="40"
+            class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+            aria-required="true"
+            aria-invalid="false"
+            placeholder="Email"
+          />
+        </span>
+        <span class="wpcf7-form-control-wrap Email">
+          <input
+            type="text"
+            name="reason"
+            size="40"
+            class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+            aria-required="true"
+            aria-invalid="false"
+            placeholder="Reason"
+          />
+        </span>
+
+        <center><input type="submit" value="SAVE " /></center>
+      </p>
+    </form>
+  </div>
 </div>
-</body>
 {% endblock content %}

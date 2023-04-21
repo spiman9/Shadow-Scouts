@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+.body-style {
+   background: url('./../img/leave.jpeg') no-repeat center center fixed;
+    /* http://andstud.io/wp-content/uploads/2014/03/blurrrr2.jpg */
+  	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+    padding-top: 0px;
+}
+
+h1 {
+   color: rgb(67, 163, 67); 
+   text-shadow: 1px 1px 0 rgba(203, 32, 32, 0.4);
+   padding-top: 30px;
+   font-size: 100px; 
+   font-weight: 700;
+   text-align: center;
+   font-family: 'Source Sans Pro', sans-serif;
+   margin: 0px;
+}
+
+form {
+    margin-left:auto;
+    margin-right:auto;
+    width: 965px;
+    height: 450px;
+    padding:30px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    overflow: hidden; 
+}
+
+/* textarea{
+	  background: rgba(0, 0, 0, 0.4); 
+    width: 894px;
+    height: 110px;
+    border: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 45px;
+    padding-right: 20px;
+    padding-top: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+} */
+
+
+
+.nameinput, .emailinput {
+    width: 894px;
+    height: 48px;
+    border: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* input[type=submit] {
+    cursor: pointer;
+} */
+
+input.nameinput {
+	  background: rgba(0, 0, 0, 0.4); 
+	  padding-left: 45px;
+}
+
+input.emailinput {
+	  background: rgba(0, 0, 0, 0.4);
+	  padding-left: 45px;
+}
+
+/* input.message {
+	  background: rgba(0, 0, 0, 0.4);
+	  padding-left: 45px;
+} */
+
+/* select.indent {
+	  padding-left: 45px;
+    cursor: pointer;
+} */
+
+::-webkit-input-placeholder {
+	  color: #fff;
+}
+
+:-moz-placeholder{ 
+    color: #fff; 
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {  
+	  color: #fff; 
+}
+
+
+input[type=submit] {
+        background-color: rgb(160, 11, 14);
+        color: white;
+        border-radius: 18px;
+        margin: 10px;
+        box-shadow: 4px rgb(240, 130, 130);
+        width: 90px;;
+}
