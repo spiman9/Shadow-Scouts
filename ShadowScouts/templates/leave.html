@@ -1,10 +1,11 @@
 {% extends 'homepage.html' %}
+{% load static %}
 
 {% block content %}
 <style>
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 body {
-   background-color: #72f670; url('leave.jpeg')no-repeat center center fixed;
+   background: url({% static 'img/leave.jpeg' %}) no-repeat center center fixed;
     /* http://andstud.io/wp-content/uploads/2014/03/blurrrr2.jpg */
   	-webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -14,8 +15,8 @@ body {
 }
 
 h1 {
-   color: #fff; 
-   text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+   color: rgb(67, 163, 67); 
+   text-shadow: 1px 1px 0 rgba(203, 32, 32, 0.4);
    padding-top: 30px;
    font-size: 100px; 
    font-weight: 700;
@@ -149,7 +150,7 @@ input[type=submit] {
         </div>
         <p>
            <span class="wpcf7-form-control-wrap Name">
-             <input type="text" name="Name" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name">
+             <input type="text" name="name" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name">
           </span>
           <span class="wpcf7-form-control-wrap Name">
             <input type="text" name="address" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Address">
@@ -158,10 +159,10 @@ input[type=submit] {
           <input type="date" name="date"  size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Date">
         </span>
           <span class="wpcf7-form-control-wrap Email">
-            <input type="email" name="Email"  size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email">
+            <input type="email" name="email"  size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email">
           </span>
           <span class="wpcf7-form-control-wrap Email">
-            <input type="text" name="Email"  size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Reason">
+            <input type="text" name="reason"  size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Reason">
           </span>
           
          <center><input type="submit" value="SAVE "></center> 
