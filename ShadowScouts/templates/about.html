@@ -3,18 +3,256 @@
 
 
 {% block content %}
-<link rel="stylesheet" href="{% static '/css/about.css' %}">
-<div class="about">
-    <img src="{% static 'img/panda.jfif' %} ">
 
+<style>
+    body,
+    html {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: 80%;
+        background: mediumturquoise;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 15px;
+        cursor: pointer;
+        margin: 1em 1em 0em 1em;
+    }
+
+    .card::before,
+    .card::after {
+        position: absolute;
+        content: "";
+        width: 20%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: bold;
+        background-image: linear-gradient(to right, #27e372, #b3df6d);
+        transition: all 0.5s;
+    }
+
+    .card::before {
+        top: 0;
+        right: 0;
+        border-radius: 0 15px 0 100%;
+    }
+
+    .card::after {
+        bottom: 0;
+        left: 0;
+        border-radius: 0 100% 0 15px;
+    }
+
+    .card:hover::before,
+    .card:hover:after {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        transition: all 0.5s;
+    }
+
+    .card.card1:hover:after {
+        content: "Reecha Topinkatti";
+    }
+
+    .card.card2:hover:after {
+        content: "Pritham Giryalkar";
+    }
+
+    .card.card3:hover:after {
+        content: "Koush";
+    }
+
+    .card.card4:hover:after {
+        content: "Divyani Kumbar";
+    }
+
+    .img1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        justify-content: center;
+    }
+
+    .about {
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        height: 50vh;
+        display: inline-block;
+    }
+
+    .about2 {
+        background-image: linear-gradient(to right, #00b09b, #96c93d);
+        height: 50vh;
+        display: inline-block;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .column1 {
+        display: flex;
+        position: relative;
+        float: left;
+        width: 30%;
+        padding: 0.1rem 4rem 0.1rem 4rem;
+    }
+
+    .column2 {
+        float: right;
+        width: 70%;
+        padding: 0.1rem 4rem 0.1rem 4rem;
+    }
+    .column3 {
+        display: flex;
+        position: relative;
+        float: right;
+        width: 30%;
+        padding: 0.1rem 4rem 0.1rem 4rem;
+    }
+
+    .column4 {
+        float: left;
+        width: 70%;
+        padding: 0.1rem 4rem 0.1rem 4rem;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    p {
+        padding-left: 0.5rem;
+        display: inline-flexbox;
+    }
+
+    span {
+        display: inline-block;
+        padding: 1em 1em 1em 1em;
+    }
+</style>
+
+<!-- <center>
+<div class="in">
+<div class="card card1"><img src="{% static 'img\reecha.jpg' %}  "></div>
+<div class="card">    <img src="{% static 'img/panda.jfif' %}"></div>
+<div class="card">    <img src="{% static 'img/panda.jfif' %}"></div>
+<div class="card">    <img src="{% static 'img/panda.jfif' %}"></div>
+<p class="card card1" data-content="<h1>Reecha Topinkatti</h1>"></p>
+</div></center> -->
+<!-- <link rel="stylesheet" href="{% static '/css/about.css' %}"> -->
+<div class="row">
+    <div class="about">
+
+        <div class="column1">
+            <div class="card card1"><img class="img1" src="{% static 'img\reecha.jpg' %}  "></div>
+        </div>
+        <div class="column2">
+
+            <p>
+            <h2>About</h2>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni similique ab voluptates quisquam. Porro
+            quaerat, fuga nesciunt provident vero corrupti illo natus vitae perspiciatis blanditiis! Nulla similique
+            iusto impedit rem. <br>
+            <h2>You can follow me on</h2>
+            <span><a href="https://twitter.com/MDesignsuk" target="_blank"><img
+                        src="{% static 'img\linkedin logo.png' %}" width="30px" alt=""></a></span>
+            <span><a href="https://github.com/Mario-Duarte/" target="_blank"><img
+                        src="{% static 'img\GitHub Logo.png' %}" width="30px" alt=""></a></span>
+            <span><a href="https://bitbucket.org/Mario_Duarte/" target="_blank"><img
+                        src="{% static 'img\insta Logo.png' %}" width="30px" alt=""></i></a></span>
+            <span><a href="https://codepen.io/MarioDesigns/" target="_blank"><img
+                        src="{% static 'img\twitter Logo.png' %}" width="30px" alt=""></a></span>
+            </p>
+        </div>
+    </div>
 </div>
-<div class="about2">
-    <img src="{% static 'img/panda.jfif' %}">
-</div>
-<div class="about">
-    <img src="{% static 'img/panda.jfif' %}">
-</div>
-<div class="about2">
-    <img src="{% static 'img/panda.jfif' %}" style="place-items:left;">
+<div class="row">
+    <div class="about2">
+
+        <div class="column3">
+            <div class="card card2"><img class="img1" src="{% static 'img\panda.jfif' %}  "></div>
+        </div>
+        <div class="column4">
+
+            <p>
+            <h2>About</h2>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni similique ab voluptates quisquam. Porro
+            quaerat, fuga nesciunt provident vero corrupti illo natus vitae perspiciatis blanditiis! Nulla similique
+            iusto impedit rem. <br>
+            <h2>You can follow me on</h2>
+            <span><a href="https://twitter.com/MDesignsuk" target="_blank"><img
+                        src="{% static 'img\linkedin logo.png' %}" width="30px" alt=""></a></span>
+            <span><a href="https://github.com/Mario-Duarte/" target="_blank"><img
+                        src="{% static 'img\GitHub Logo.png' %}" width="30px" alt=""></a></span>
+            <span><a href="https://bitbucket.org/Mario_Duarte/" target="_blank"><img
+                        src="{% static 'img\insta Logo.png' %}" width="30px" alt=""></i></a></span>
+            <span><a href="https://codepen.io/MarioDesigns/" target="_blank"><img
+                        src="{% static 'img\twitter Logo.png' %}" width="30px" alt=""></a></span>
+            </p>
+        </div>
+    </div>
+</div><div class="row">
+    <div class="about">
+
+        <div class="column1">
+            <div class="card card3"><img class="img1" src="{% static 'img\panda.jfif' %}  "></div>
+        </div>
+        <div class="column2">
+
+            <p>
+            <h2>About</h2>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni similique ab voluptates quisquam. Porro
+            quaerat, fuga nesciunt provident vero corrupti illo natus vitae perspiciatis blanditiis! Nulla similique
+            iusto impedit rem. <br>
+            <h2>You can follow me on</h2>
+            <span><a href="https://twitter.com/MDesignsuk" target="_blank"><img
+                        src="{% static 'img\linkedin logo.png' %}" width="30px" alt=""></a></span>
+            <span><a href="https://github.com/Mario-Duarte/" target="_blank"><img
+                        src="{% static 'img\GitHub Logo.png' %}" width="30px" alt=""></a></span>
+            <span><a href="https://bitbucket.org/Mario_Duarte/" target="_blank"><img
+                        src="{% static 'img\insta Logo.png' %}" width="30px" alt=""></i></a></span>
+            <span><a href="https://codepen.io/MarioDesigns/" target="_blank"><img
+                        src="{% static 'img\twitter Logo.png' %}" width="30px" alt=""></a></span>
+            </p>
+        </div>
+    </div>
+</div><div class="row">
+    <div class="about2">
+
+        <div class="column3">
+            <div class="card card4"><img class="img1" src="{% static 'img\panda.jfif' %}  "></div>
+        </div>
+        <div class="column4">
+
+            <p>
+            <h2>About</h2>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni similique ab voluptates quisquam. Porro
+            quaerat, fuga nesciunt provident vero corrupti illo natus vitae perspiciatis blanditiis! Nulla similique
+            iusto impedit rem. <br>
+            <h2>You can follow me on</h2>
+            <span><a href="https://twitter.com/MDesignsuk" target="_blank"><img
+                        src="{% static 'img\linkedin logo.png' %}" width="30px" alt=""></a></span>
+            <span><a href="https://github.com/Mario-Duarte/" target="_blank"><img
+                        src="{% static 'img\GitHub Logo.png' %}" width="30px" alt=""></a></span>
+            <span><a href="https://bitbucket.org/Mario_Duarte/" target="_blank"><img
+                        src="{% static 'img\insta Logo.png' %}" width="30px" alt=""></i></a></span>
+            <span><a href="https://codepen.io/MarioDesigns/" target="_blank"><img
+                        src="{% static 'img\twitter Logo.png' %}" width="30px" alt=""></a></span>
+            </p>
+        </div>
+    </div>
 </div>
 {% endblock content %}
