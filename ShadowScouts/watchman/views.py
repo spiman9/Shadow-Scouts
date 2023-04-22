@@ -28,8 +28,7 @@ def contact(request):
         subject = f"Shadow Scouts: {name} wants to Connect"
         message = f"{name} has following message for you\n{msg}"
         send_mail(subject, message, from_email, recipient_list, fail_silently=False)
-        messages.success(request , 'Your message.')
-        # messages.success(request , 'Your message.')
+        messages.success(request , 'Successfully Submitted the form')
         return render(request,"homepage.html")
     return render(request,"contactUs.html")
 

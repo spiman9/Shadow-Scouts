@@ -51,12 +51,12 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link font-anchor" aria-current="page" href="about"
+              <a class="nav-link font-anchor active" aria-current="page" href="about"
                 >About</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link font-anchor" aria-current="page" href="contact"
+              <a class="nav-link font-anchor active" aria-current="page" href="contact"
                 >Contact</a
               >
             </li>
@@ -65,20 +65,20 @@
       </div>
     </nav>
     {% if messages %}
+    {% for message in messages %} 
     <div
-      class="alert alert-{{ message.tags }} alert-dismissible fade show"
+      class="alert alert-{{ message.tags }} alert-dismissible fade show text-center mb-0"
       role="alert"
     >
-      {% for message in messages %} {% if message.tags %}
-      <h4 class="text-center">{{message}}</h4>
+      <strong{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</strong>
       <button
         type="button"
         class="btn-close"
         data-bs-dismiss="alert"
         aria-label="Close"
-      ></button>
-      {% endif %} {% endfor %}
+      ></button> 
     </div>
+    {% endfor %}
 
     {% endif %} {% block content %} {% comment %} home page {% endcomment %}
     <h1>Home page</h1>

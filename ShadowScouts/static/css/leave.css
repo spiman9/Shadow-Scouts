@@ -85,7 +85,9 @@ input.emailinput {
 :-ms-input-placeholder {
   color: #fff;
 }
-
+input:hover{
+    background-color: gold;
+}
 @media (max-width: 500px) {
 
   input[type="submit"] {
@@ -100,9 +102,10 @@ input.emailinput {
     left: 92px;
   }
 
+  
   .nameinput,
 .emailinput {
-  width: 360px;
+  width: 320px;
   height: 48px;
   border: none;
   -moz-border-radius: 10px;
@@ -123,7 +126,7 @@ input.emailinput {
 form {
     margin-left: auto;
     margin-right: auto;
-    width: 412px;
+    width: auto;
     height: 915px;
     padding: 30px;
     -moz-border-radius: 10px;
@@ -134,7 +137,6 @@ form {
     background-clip: padding-box;
     overflow: hidden;
   }
-
 }
 
 @media (min-width: 500px) {

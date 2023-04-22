@@ -141,7 +141,7 @@
   @media (max-width: 500px){
     form {
       margin: 0 auto;
-      width: 500px;
+      width: 300px;
       padding-top: 40px;
       color: white;
       position: relative;
@@ -150,7 +150,7 @@
     input,
   textarea {
     margin-left: 10px;
-    width: 360px;
+    width: 250px;
     border: none;
     border-radius: 20px;
     outline: none;
