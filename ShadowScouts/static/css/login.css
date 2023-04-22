@@ -126,3 +126,9 @@
         .signup_link a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 500px){
+            body{
+                margin-top: 0px;
+            }
+        }

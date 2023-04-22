@@ -1,0 +1,12 @@
+body{
+    font-family: "Sniglet", cursive;
+  }
+  .font30{
+      font-size: 30px;
+  }
+  .font-anchor{
+      font-size: 20px;
+  }
+  a:hover{
+      text-transform: underline;
+  }

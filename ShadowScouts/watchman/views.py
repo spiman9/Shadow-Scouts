@@ -3,6 +3,7 @@ from .models import Contact
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.contrib.auth.models import User , auth
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -27,6 +28,8 @@ def contact(request):
         subject = f"Shadow Scouts: {name} wants to Connect"
         message = f"{name} has following message for you\n{msg}"
         send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+        messages.success(request , 'Your message.')
+        # messages.success(request , 'Your message.')
         return render(request,"homepage.html")
     return render(request,"contactUs.html")
 

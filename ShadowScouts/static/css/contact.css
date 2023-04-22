@@ -5,7 +5,6 @@
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Sniglet", cursive;
   }
   h1 {
     font-weight: normal;
@@ -13,10 +12,11 @@
     font-family: "Raleway", sans-serif;
     margin: 0 auto;
     margin-top: 30px;
-    width: 500px;
     color: #f90;
     text-align: center;
   }
+
+  
 
   /* Animation webkit */
   @-webkit-keyframes myfirst {
@@ -80,41 +80,12 @@
     overflow: hidden;
     position: relative;
   }
-  form {
-    margin: 0 auto;
-    width: 500px;
-    padding-top: 40px;
-    color: white;
-    position: relative;
-  }
   label,
   input,
   textarea {
     display: block;
   }
-  input,
-  textarea {
-    width: 500px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    padding: 10px;
-    font-family: "Sniglet", cursive;
-    font-size: 1em;
-    color: #676767;
-    transition: border 0.5s;
-    -webkit-transition: border 0.5s;
-    -moz-transition: border 0.5s;
-    -o-transition: border 0.5s;
-    border: solid 3px #98d4f3;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  input:focus,
-  textarea:focus {
-    border: solid 3px #77bde0;
-  }
+  
 
   textarea {
     height: 100px;
@@ -167,5 +138,71 @@
     color: red;
   }
 
+  @media (max-width: 500px){
+    form {
+      margin: 0 auto;
+      width: 500px;
+      padding-top: 40px;
+      color: white;
+      position: relative;
+    }
 
-  
+    input,
+  textarea {
+    margin-left: 10px;
+    width: 360px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    font-family: "Sniglet", cursive;
+    font-size: 1em;
+    color: #676767;
+    transition: border 0.5s;
+    -webkit-transition: border 0.5s;
+    -moz-transition: border 0.5s;
+    -o-transition: border 0.5s;
+    border: solid 3px #98d4f3;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  input:focus,
+  textarea:focus {
+    border: solid 3px #77bde0;
+  }
+  }
+
+  @media (min-width: 500px){
+    form {
+      margin: 0 auto;
+      width: 500px;
+      padding-top: 40px;
+      color: white;
+      position: relative;
+    }
+
+    input,
+  textarea {
+    width: 500px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    font-family: "Sniglet", cursive;
+    font-size: 1em;
+    color: #676767;
+    transition: border 0.5s;
+    -webkit-transition: border 0.5s;
+    -moz-transition: border 0.5s;
+    -o-transition: border 0.5s;
+    border: solid 3px #98d4f3;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  input:focus,
+  textarea:focus {
+    border: solid 3px #77bde0;
+  }
+  }
