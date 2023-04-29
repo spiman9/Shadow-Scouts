@@ -24,4 +24,5 @@ urlpatterns = [
     path('profile' , views.profile , name = "profile"),
     path('leave' , views.leave , name = "leave"),
     path('login' , views.login , name = "login"),
+    path('register' , views.register , name = "register"),
 ]

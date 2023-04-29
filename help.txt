@@ -1,0 +1,26 @@
+Watchman:
+
+name
+phoneno
+address
+email
+upload photo 
+Identity Card
+snapshot of photo
+auto generated unique Id
+
+admin:
+
+name
+designation
+upload a photo
+email
+
+
+leave:
+
+ID
+address
+date
+email
+reason

@@ -50,3 +50,6 @@ def login(request):
             # messages.success(request, "Successfully Login!!! " , {request.user}) 
             return redirect("/")
     return render(request , "login.html")
+
+def register(request):
+    return render(request , "register.html")
