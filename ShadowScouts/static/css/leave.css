@@ -86,7 +86,7 @@ input.emailinput {
   color: #fff;
 }
 input:hover{
-    background-color: gold;
+    background-color: rgb(111, 255, 0);
 }
 @media (max-width: 500px) {
 
@@ -96,7 +96,7 @@ input:hover{
     border-radius: 18px;
     margin: 10px;
     box-shadow: 4px rgb(240, 130, 130);
-    width: 200px;
+    width: 100px;
     padding: 10px 30px;
     position: absolute;
     left: 92px;
@@ -148,7 +148,7 @@ form {
     border-radius: 18px;
     margin: 10px;
     box-shadow: 4px rgb(240, 130, 130);
-    width: 200px;
+    width: 100px;
     padding: 10px 40%;
   }
 
