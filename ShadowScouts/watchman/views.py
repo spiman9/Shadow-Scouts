@@ -52,4 +52,7 @@ def login(request):
     return render(request , "login.html")
 
 def register(request):
+    if(request.method == "POST"):
+        print(request.POST)
+        return redirect("/")
     return render(request , "register.html")

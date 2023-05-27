@@ -1,15 +1,14 @@
-Watchman:
+1. Watchman:
 
 name
+snapshot of photo
 phoneno
 address
 email
-upload photo 
 Identity Card
-snapshot of photo
 auto generated unique Id
 
-admin:
+2. admin:
 
 name
 designation
@@ -17,10 +16,16 @@ upload a photo
 email
 
 
-leave:
+3. leave:
 
 ID
 address
 date
 email
 reason
+
+
+main page
+
+1. Recent messages will be display... festival , got leave or no 
+2. 
