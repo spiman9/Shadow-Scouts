@@ -16,44 +16,64 @@
         <form action="/register" method="POST">
           {% csrf_token %}
           <div class="txt_field">
-            <input type="text" name="name" required />
+            <input type="text" name="fname" required />
             <span></span>
-            <label for="">Name</label>
+            <label for="">First Name</label>
           </div>
 
           <div class="txt_field">
+            <input type="text" name="lname" required />
+            <span></span>
+            <label for="">Last Name</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="password" name="p" required />
+            <span></span>
+            <label for="">Password</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="password" name="cp" required />
+            <span></span>
+            <label for="">Confirm Password</label>
+          </div>
+
+          
+
+          {% comment %} <div class="txt_field">
             <input type="text" name="phoneno" required />
             <span></span>
             <label for="">Phone number</label>
-          </div>
+          </div> {% endcomment %}
 
-          <div class="txt_field">
+          {% comment %} <div class="txt_field">
             <input type="text" name="address" required />
             <span></span>
             <label for="">Address</label>
-          </div>
+          </div> {% endcomment %}
 
-          <div class="txt_field">
+          {% comment %} <div class="txt_field">
             <input type="text" name="email" required />
             <span></span>
             <label for="">Email</label>
-          </div>
+          </div> {% endcomment %}
 
-          <div class="txt_field">
+          {% comment %} <div class="txt_field">
             <labell for="photo">Upload your photo</labell>
             <input type="file" name="photo" required />
-          </div>
+          </div> {% endcomment %}
 
-          <div class="txt_field">
+          {% comment %} <div class="txt_field">
             <input type="text" name="adharnumber" required />
             <span></span>
             <label for="">Addhar card number</label>
-          </div>
+          </div> {% endcomment %}
 
-          <div class="txt_field">
+          {% comment %} <div class="txt_field">
             <labell for="photo">Upload Photo of Identity Card</labell>
             <input type="file" name="photo" required />
-          </div>
+          </div> {% endcomment %}
 
 
           <input type="submit" value="Register" name="" id="submit">

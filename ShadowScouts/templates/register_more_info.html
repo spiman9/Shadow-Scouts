@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="center">
+        <h1>Additional Information Required</h1>
+        <br />
+        <h2 style="text-align: center">Your Username : {{ username }}</h2>
+        <p style="text-align: center">(Kindly Note: Useful for login)</p>
+        <form action="/register_main" method="POST">
+          {% csrf_token %}
+          
+            {% comment %} <input type="text" name="gender" required />
+            <span></span>
+            <label for="">Gender</label> {% endcomment %}
+          
+          <div class="txt_field" class="dropdown" >
+          {% comment %} <label for="gender">Gender:</label> {% endcomment %}
+          <span class="dist">Gender</span>
+          <select name="gender"required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+        </div>
+
+          <div class="txt_field">
+            <input type="email" name="email" required />
+            <span></span>
+            <label for="">Email</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="text" name="adharnumber" required />
+            <span></span>
+            <label for="">Adhar Number</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="phoneno" name="pno" required />
+            <span></span>
+            <label for="">Phone Number</label>
+          </div>
+
+          {% comment %}
+          <div class="txt_field">
+            <input type="password" name="cp" required />
+            <span></span>
+            <label for="">Confirm Password</label>
+          </div>
+          {% endcomment %} {% comment %}
+          <div class="txt_field">
+            <input type="text" name="phoneno" required />
+            <span></span>
+            <label for="">Phone number</label>
+          </div>
+          {% endcomment %} {% comment %}
+          <div class="txt_field">
+            <input type="text" name="address" required />
+            <span></span>
+            <label for="">Address</label>
+          </div>
+          {% endcomment %} {% comment %}
+          <div class="txt_field">
+            <input type="text" name="email" required />
+            <span></span>
+            <label for="">Email</label>
+          </div>
+          {% endcomment %} {% comment %}
+          <div class="txt_field">
+            <labell for="photo">Upload your photo</labell>
+            <input type="file" name="photo" required />
+          </div>
+          {% endcomment %} {% comment %}
+          <div class="txt_field">
+            <input type="text" name="adharnumber" required />
+            <span></span>
+            <label for="">Addhar card number</label>
+          </div>
+          {% endcomment %} {% comment %}
+          <div class="txt_field">
+            <labell for="photo">Upload Photo of Identity Card</labell>
+            <input type="file" name="photo" required />
+          </div>
+          {% endcomment %}
+
+          <input type="submit" value="Register" name="" id="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

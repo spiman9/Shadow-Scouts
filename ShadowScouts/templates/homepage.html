@@ -82,6 +82,14 @@
 
     {% endif %} {% block content %} {% comment %} home page {% endcomment %}
     <h1>Home page</h1>
+
+    {% comment %} remove afterwards {% endcomment %}
+    {% if request.user.is_authenticated %}
+        <p>Welcome, {{ request.user.username }}!</p>
+    {% else %}
+        <p>Not logged in</p>
+    {% endif %}
+    
     {% endblock content %} {% comment %} footer {% endcomment %}
   </body>
 </html>

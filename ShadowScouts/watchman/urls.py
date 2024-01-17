@@ -25,4 +25,5 @@ urlpatterns = [
     path('leave' , views.leave , name = "leave"),
     path('login' , views.login , name = "login"),
     path('register' , views.register , name = "register"),
+    path('register_main' , views.register_main , name = "register_main"),
 ]
