@@ -121,3 +121,9 @@ def register_main(request):
         # redirecting to the login page
         return redirect("/login")
     return render(request , "register_more_info.html" ,{'username' : uname})
+
+
+def logoutuser(request):
+    auth.logout(request)
+    messages.success(request, "Logout Succesfully!!! " ) 
+    return redirect("/")
